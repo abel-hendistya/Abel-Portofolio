@@ -1,0 +1,113 @@
+/* Gaya umum untuk Contact */
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #1b1b1b;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Judul */
+.contact-title {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 2rem;
+}
+
+/* Formulir Kontak */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ff6f61;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 5px solid #ff6f61;
+  border-radius: 20px;
+  background-color: #1b1b1b;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.send-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ff6f61;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #e55b50;
+}
+
+/* Informasi Kontak */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 150px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  color: #ff6f61;
+}
+
+/* Media Sosial */
+.sosmed {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.sosmed-icon {
+  font-size: 1.8rem;
+  color: #ff6f61;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.sosmed-icon:hover {
+  transform: scale(1.2);
+  color: #e55b50;
+}

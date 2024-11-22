@@ -1,0 +1,57 @@
+.education {
+    padding: 60px 20px;
+    background-color: #1c1c1c; /* Warna latar */
+    color: #ffffff;
+  }
+  
+  .education-title {
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #ff6c33;
+  }
+  
+  .education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .education-item {
+    display: flex;
+    align-items: center;
+    background-color: #5a2e2e; /* Warna coklat gelap */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .education-icon {
+    font-size: 40px;
+    color: #ff5722;
+    margin-right: 20px;
+  }
+  
+  .education-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .education-year {
+    font-size: 14px;
+    color: #ffb074;
+    margin-bottom: 5px;
+  }
+  
+  .education-degree {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .education-institution {
+    font-size: 16px;
+    color: #ddd;
+  }
+  

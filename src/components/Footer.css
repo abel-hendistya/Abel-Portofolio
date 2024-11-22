@@ -1,0 +1,17 @@
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-link {
+    color: #ff5722;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  .footer-link:hover {
+    color: #e64a19;
+    text-decoration: underline;
+  }
+  

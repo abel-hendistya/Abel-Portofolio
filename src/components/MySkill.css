@@ -1,0 +1,45 @@
+.my-skill-section {
+  background-color: #1b1b1b;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #ff6c33;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Tambahan agar tetap responsif */
+}
+
+.skill-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+  width: 120px; /* Ukuran kartu seragam */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.skill-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}

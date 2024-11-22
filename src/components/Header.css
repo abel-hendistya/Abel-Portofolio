@@ -1,0 +1,104 @@
+/* Header utama */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ff5722;
+  color: #ffffff;
+  position: fixed; /* Tetap berada di atas */
+  top: 0;
+  width: 100%; /* Lebar penuh */
+  z-index: 10;
+  transition: all 0.3s ease; /* Animasi untuk perubahan ukuran */
+  height: 80px; /* Tinggi awal header */
+}
+
+/* Header saat di-scroll */
+.header-small {
+  padding: 10px 30px; /* Padding lebih kecil */
+  height: 60px; /* Tinggi header saat di-scroll */
+  background-color: #e64a19; /* Warna sedikit lebih gelap */
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "BestermindRegular";
+  transition: font-size 0.3s ease; /* Animasi ukuran logo */
+}
+
+/* Logo saat header mengecil */
+.header-small .logo {
+  font-size: 20px; /* Ukuran logo lebih kecil */
+}
+
+/* Menu Ikon */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.menu-icon:active {
+  transform: scale(0.9);
+}
+
+/* Menu Sidebar */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #1a1a1a;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 20;
+}
+
+.menu-open {
+  left: 0;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu-list li {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.menu-list li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ff5722;
+  background: transparent;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  gap: 10px;
+}
+
+.menu-list li a:hover {
+  background-color: #ff5722;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+}
