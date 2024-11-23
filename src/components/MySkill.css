@@ -9,14 +9,14 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #ff6c33;
+  color: #0A3981;
 }
 
 .skills-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Tambahan agar tetap responsif */
+  flex-wrap: wrap;
 }
 
 .skill-card {
@@ -26,7 +26,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   text-align: center;
   color: #fff;
-  width: 120px; /* Ukuran kartu seragam */
+  width: 120px; 
   display: flex;
   flex-direction: column;
   align-items: center;
