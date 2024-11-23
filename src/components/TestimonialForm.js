@@ -1,76 +1,62 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Testimonials.css";
 
 const TestimonialForm = ({ addTestimonial, editingIndex, initialData }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    profession: "",
-    message: "",
-  });
+  const [name, setName] = useState(initialData?.name || "");
+  const [message, setMessage] = useState(initialData?.message || "");
+  const [stars, setStars] = useState(initialData?.stars || 0); // State untuk bintang
 
-  // Efek untuk mengisi form ketika sedang dalam mode edit
-  useEffect(() => {
-    if (initialData) {
-      setFormData(initialData);
-    }
-  }, [initialData]);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+  // Fungsi untuk menangani klik pada bintang
+  const handleStarClick = (index) => {
+    setStars(index + 1); // Mengatur jumlah bintang (0-based index)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTestimonial(formData);
-    setFormData({
-      name: "",
-      profession: "",
-      message: "",
-    });
+    addTestimonial({ name, message, stars });
+    setName("");
+    setMessage("");
+    setStars(0);
   };
 
   return (
     <form className="testimonial-form" onSubmit={handleSubmit}>
-      <h2>{editingIndex !== null ? "Edit Testimonial" : "Add Testimonial"}</h2>
       <div className="form-group">
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           required
         />
       </div>
       <div className="form-group">
-        <label htmlFor="profession">Profession:</label>
-        <input
-          type="text"
-          id="profession"
-          name="profession"
-          value={formData.profession}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="message">Message:</label>
+        <label htmlFor="message">Message</label>
         <textarea
           id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           rows="4"
           required
         ></textarea>
       </div>
+      <div className="form-group">
+        <label>Rating:</label>
+        <div className="testimonial-stars">
+          {Array.from({ length: 5 }, (_, i) => (
+            <span
+              key={i}
+              className={`star ${i < stars ? "filled" : ""}`} // Cek apakah bintang terisi
+              onClick={() => handleStarClick(i)} // Klik untuk mengisi
+            >
+              ★
+            </span>
+          ))}
+        </div>
+      </div>
       <button type="submit" className="submit-btn">
-        {editingIndex !== null ? "Update" : "Submit"}
+        Submit
       </button>
     </form>
   );
