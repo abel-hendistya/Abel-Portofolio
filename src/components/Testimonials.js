@@ -1,73 +1,113 @@
 import React, { useState } from "react";
+import Swal from "sweetalert2"; // Import SweetAlert2
 import TestimonialForm from "./TestimonialForm";
 import "./Testimonials.css";
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
+  const [showForm, setShowForm] = useState(false);
 
-  // Menambahkan testimonial
-  const addTestimonial = (testimonial) => {
+  const addOrUpdateTestimonial = (testimonial) => {
     if (editingIndex !== null) {
-      // Jika sedang mengedit, update testimonial
       const updatedTestimonials = [...testimonials];
       updatedTestimonials[editingIndex] = testimonial;
       setTestimonials(updatedTestimonials);
-      setEditingIndex(null); // Reset mode editing
+      setEditingIndex(null);
     } else {
-      // Jika tidak sedang mengedit, tambahkan testimonial baru
       setTestimonials([...testimonials, testimonial]);
     }
+    setShowForm(false);
   };
 
-  // Menghapus testimonial
   const deleteTestimonial = (index) => {
     const filteredTestimonials = testimonials.filter((_, i) => i !== index);
     setTestimonials(filteredTestimonials);
   };
 
-  // Mengedit testimonial
   const editTestimonial = (index) => {
     setEditingIndex(index);
+    setShowForm(true);
+  };
+
+  const handleLearnMore = (index) => {
+    Swal.fire({
+      title: "What do you want to do?",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Edit",
+      denyButtonText: "Delete",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        editTestimonial(index); // Call edit function
+      } else if (result.isDenied) {
+        deleteTestimonial(index); // Call delete function
+        Swal.fire("Deleted!", "Your testimonial has been deleted.", "success");
+      }
+    });
   };
 
   return (
     <section className="testimonials-section">
-      {/* Tambahkan title utama di sini */}
-      <h1 className="main-title">Testimonials</h1>
+      <h1 className="testimonials-title">Testimonials</h1>
       <div className="testimonials-container">
-        {/* Form untuk input testimonial */}
-        <div className="testimonial-form-container">
-          <TestimonialForm
-            addTestimonial={addTestimonial}
-            editingIndex={editingIndex}
-            initialData={editingIndex !== null ? testimonials[editingIndex] : null}
-          />
+        <div className="col-md-4">
+          <button
+            className="add-btn"
+            onClick={() => {
+              setShowForm(!showForm);
+              setEditingIndex(null);
+            }}
+          >
+            {showForm ? "Close Form" : "Add Testimonial"}
+          </button>
+
+          {showForm && (
+            <div className="testimonial-form-container">
+              <TestimonialForm
+                addTestimonial={addOrUpdateTestimonial}
+                editingIndex={editingIndex}
+                initialData={editingIndex !== null ? testimonials[editingIndex] : null}
+              />
+            </div>
+          )}
         </div>
 
-        {/* Output testimonial */}
         <div className="testimonial-output-container">
-          <h2 className="testimonials-title">Customer Feedback</h2>
-          {testimonials.length === 0 ? (
-            <p>No testimonials yet. Add one!</p>
-          ) : (
-            testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-item">
-                <p className="testimonial-quote">"{testimonial.message}"</p>
-                <div className="testimonial-author">
-                  <strong>{testimonial.name}</strong> - {testimonial.profession}
+          <h2 className="feedback-title">Customer Feedback</h2>
+          <div className="row">
+            {testimonials.length === 0 ? (
+              <p>No testimonials yet. Add one!</p>
+            ) : (
+              testimonials.map((testimonial, index) => (
+                <div key={index} className="col-md-6">
+                  <div className="testimonial-card">
+                    <h3 className="testimonial-name">{testimonial.name}</h3>
+                    <div className="testimonial-stars">
+                      {Array.from({ length: 5 }, (_, i) => (
+                        <span
+                          key={i}
+                          className={`star ${i < testimonial.stars ? "filled" : ""}`}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <p className="testimonial-message">"{testimonial.message}"</p>
+                    <div className="testimonial-actions">
+                      <button
+                        className="learn-more-btn"
+                        onClick={() => handleLearnMore(index)}
+                      >
+                        Learn More
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div className="testimonial-actions">
-                  <button onClick={() => editTestimonial(index)} className="edit-btn">
-                    Edit
-                  </button>
-                  <button onClick={() => deleteTestimonial(index)} className="delete-btn">
-                    Delete
-                  </button>
-                </div>
-              </div>
-            ))
-          )}
+              ))
+            )}
+          </div>
         </div>
       </div>
     </section>
