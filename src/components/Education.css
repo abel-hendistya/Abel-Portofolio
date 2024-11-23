@@ -1,6 +1,6 @@
 .education {
     padding: 60px 20px;
-    background-color: #1c1c1c; /* Warna latar */
+    background-color: #1c1c1c; 
     color: #ffffff;
   }
   
@@ -9,7 +9,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #ff6c33;
+  color: #0A3981;
   }
   
   .education-list {
@@ -21,7 +21,7 @@
   .education-item {
     display: flex;
     align-items: center;
-    background-color: #5a2e2e; /* Warna coklat gelap */
+    background-color: #0B192C;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -29,7 +29,7 @@
   
   .education-icon {
     font-size: 40px;
-    color: #ff5722;
+    color: #0A3981;
     margin-right: 20px;
   }
   
@@ -40,7 +40,7 @@
   
   .education-year {
     font-size: 14px;
-    color: #ffb074;
+    color: #7EC8FF;
     margin-bottom: 5px;
   }
   
