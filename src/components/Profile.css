@@ -1,136 +1,132 @@
 .profile-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 170px 70px;
-    background: linear-gradient(90deg, #ff5722 50%, #2b2b2b 50%);
-    color: #ffffff;
-  }
-  
-  .profile-left {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .profile-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .profile-right {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .profile-right h1 {
-    font-size: 36px;
-    margin: 10px 0;
-  }
-  
-  .profile-right h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #ff5722;
-  }
-  
-  .profile-right p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  
-  .custom-buttons {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .custom-buttons .btn {
-    padding: 10px 20px;
-    border-radius: 25px;
-    background-color: transparent;
-    border: 2px solid #ff5722;
-    color: #ffffff;
-    transition: all 0.3s ease;
-  }
-  
-  .custom-buttons .btn:hover {
-    background-color: #ff5722;
-    color: #ffffff;
-  }
-  
-  .custom-download-btn {
-    background: #ff5722;
-    border: none;
-  }
-  
-  .custom-download-btn:hover {
-    background: transparent;
-    color: #ff5722;
-    border: 2px solid #ff5722;
-  }
-  
-
-  /* Hapus garis bawah pada elemen <a> */
-a.btn {
-  text-decoration: none; /* Menghapus underline */
-}
-  
-  .contact-btn {
-    color: #ff5722;
-    border: 2px solid #ff5722;
-    background: transparent;
-  }
-  
-  .contact-btn:hover {
-    background: #ff5722; /* Efek saat di-hover */
-    color: #ffffff;
-  }
-  
-  
-/* Styling untuk container sosmed */
-.sosmed {
-  margin-top: 20px;
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 170px 70px;
+  background: linear-gradient(90deg, #1b1b1b 50%, #1b1b1b 50%);
+  color: #ffffff;
+}
+
+.profile-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile-right h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.profile-right h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #37AFE1;
+}
+
+.profile-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.custom-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.custom-buttons .btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: transparent;
+  border: 2px solid #0A3981;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.custom-buttons .btn:hover {
+  background-color: #0A3981;
+  color: #ffffff;
+}
+
+.custom-download-btn {
+  background: #0A3981;
+  border: none;
+}
+
+.custom-download-btn:hover {
+  background: transparent;
+  color: #0A3981;
+  border: 2px solid #0A3981;
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+.contact-btn {
+  color: #0A3981;
+  border: 2px solid #0A3981;
+  background: transparent;
+}
+
+.contact-btn:hover {
+  background: #0A3981;
+  color: #ffffff;
+}
+
+.sosmed {
+margin-top: 20px;
+display: flex;
+gap: 15px;
 }
 
 /* Styling untuk ikon */
 .sosmed .icon {
-  color: #555;
-  font-size: 24px;
-  transition: color 0.3s, transform 0.3s;
-  text-decoration: none;
+color: #555;
+font-size: 24px;
+transition: color 0.3s, transform 0.3s;
+text-decoration: none;
 }
 
 /* Efek hover */
 .sosmed .icon:hover {
-  color: #007bff; /* Warna biru (LinkedIn) */
-  transform: scale(1.2); /* Perbesar sedikit */
+color: #007bff; /* Warna biru (LinkedIn) */
+transform: scale(1.2); /* Perbesar sedikit */
 }
 
-  
-  .icon {
-    font-size: 18px;
-    padding: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .icon:hover {
-    background-color: #ff5722;
-    border-color: #ff5722;
-    color: #ffffff;
-  }
+
+.icon {
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  background-color: #0A3981;
+  border-color: #0A3981;
+  color: #ffffff;
+}
