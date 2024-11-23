@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #ff5722;
+  background-color: #0A3981;
   color: #ffffff;
   position: fixed; /* Tetap berada di atas */
   top: 0;
@@ -18,7 +18,7 @@
 .header-small {
   padding: 10px 30px; /* Padding lebih kecil */
   height: 60px; /* Tinggi header saat di-scroll */
-  background-color: #e64a19; /* Warna sedikit lebih gelap */
+  background-color: #0A3981; /* Warna sedikit lebih gelap */
 }
 
 /* Logo */
@@ -80,7 +80,7 @@
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  border: 2px solid #ff5722;
+  border: 2px solid #0A3981;
   background: transparent;
   border-radius: 25px;
   transition: background-color 0.3s ease;
@@ -88,10 +88,9 @@
 }
 
 .menu-list li a:hover {
-  background-color: #ff5722;
+  background-color: #0A3981;
 }
 
-/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
