@@ -15,7 +15,7 @@ function Education() {
     },
     {
       year: "2023–Present",
-      title: "Master of Technology",
+      title: "Information Technology",
       institution: "Aisyiyah University Yogyakarta",
     },
   ];
