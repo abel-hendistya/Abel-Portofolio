@@ -12,17 +12,17 @@ import {
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const form = useRef(); // Menggunakan useRef untuk form
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_qqc3h5h", // Ganti dengan Service ID Anda di EmailJS
-        "template_drluqsv", // Ganti dengan Template ID Anda di EmailJS
+        "service_qqc3h5h",
+        "template_drluqsv",
         form.current,
-        "sg5aeNTf84mJyL2pD" // Ganti dengan Public Key Anda di EmailJS
+        "sg5aeNTf84mJyL2pD"
       )
       .then(
         (result) => {
@@ -35,13 +35,13 @@ const Contact = () => {
         }
       );
 
-    e.target.reset(); // Mengosongkan form setelah pengiriman
+    e.target.reset();
   };
 
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
-        {/* Formulir Kontak */}
+        {}
         <div className="contact-form">
           <h2 className="contact-title">Contacts</h2>
           <form ref={form} onSubmit={sendEmail}>
@@ -81,7 +81,7 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Informasi Kontak */}
+        {}
         <div className="contact-info">
           <div className="info-item">
             <FaEnvelope className="info-icon" />
@@ -96,7 +96,7 @@ const Contact = () => {
             <span>Yogyakarta, Indonesia</span>
           </div>
 
-          {/* Media Sosial */}
+          {}
           <div className="sosmed">
             <a
               href="https://www.instagram.com/abelhendistya?igsh=MWtrN2o4ZTRscWhubw=="
