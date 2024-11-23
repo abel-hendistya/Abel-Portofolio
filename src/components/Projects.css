@@ -1,26 +1,16 @@
-/* Section Styling */
 .projects-section {
-  background-color: #202020; /* Warna latar belakang */
-  color: #fff; /* Warna teks */
+  background-color: #1b1b1b;
+  padding: 3rem 1rem;
+  color: white;
 }
 
-/* Warna untuk title "Projects" */
 .projects-title {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 2rem;
-  color: #ff6c33;
+  color: #0A3981;
 }
 
-/* Background section "Projects" */
-.projects-section {
-  background-color: #1b1b1b; /* Warna latar belakang */
-  padding: 3rem 1rem; /* Tambahan padding jika diperlukan */
-}
-
-
-/* Card Styling */
 .project-card {
   border: none;
   border-radius: 15px;
@@ -28,30 +18,37 @@
 }
 
 .project-card:hover {
-  transform: scale(1.05); /* Efek zoom */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Bayangan */
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Image Styling */
-.project-image {
+/* Pemusatan gambar */
+.project-image-container {
   height: 200px;
-  object-fit: cover; /* Membuat gambar sesuai ukuran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-/* Title and Description */
+.project-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .project-title {
   font-size: 20px;
   font-weight: bold;
-  color: #ff5722; /* Warna oranye */
+  color: #0A3981;
 }
 
 .project-description {
   font-size: 14px;
 }
 
-/* Button Styling */
 .card-footer button {
   border: none;
   border-radius: 5px;
@@ -64,19 +61,10 @@
 }
 
 .btn-primary {
-  background-color: #ff5722; /* Warna oranye */
-  border-color: #ff5722;
+  background-color: #0A3981;
+  border-color: #0A3981;
 }
 
 .btn-primary:hover {
-  background-color: #e64a19; /* Oranye lebih gelap */
-}
-
-.btn-secondary {
-  background-color: #333; /* Warna abu gelap */
-  border-color: #333;
-}
-
-.btn-secondary:hover {
-  background-color: #555; /* Abu lebih terang */
+  background-color: #0056b3;
 }
