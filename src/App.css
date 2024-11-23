@@ -9,7 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Animasi muncul dari bawah ke atas */
 @keyframes slideInFromBottom {
   from {
     opacity: 0;
