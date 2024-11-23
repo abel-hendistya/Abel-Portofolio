@@ -1,11 +1,10 @@
 import React from "react";
 import "./Profile.css";
 import fbImage from "../assets/Screenshot 2024-11-23 062557.png";
-import cvPDF from "../assets/Abel-CV.pdf"; // Import file CV
+import cvPDF from "../assets/Abel-CV.pdf";
 
 function Profile() {
   const handleContactClick = () => {
-    // Scroll ke elemen dengan id "contact"
     const contactElement = document.getElementById("contact");
     if (contactElement) {
       contactElement.scrollIntoView({ behavior: "smooth" });
