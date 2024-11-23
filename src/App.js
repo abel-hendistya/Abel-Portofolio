@@ -16,15 +16,14 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Aktifkan animasi setelah halaman dimuat
-    const timer = setTimeout(() => setIsLoaded(true), 100); // Delay untuk efek halus
+    const timer = setTimeout(() => setIsLoaded(true), 100); 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="App">
       <Header />
-      {/* Tambahkan kelas animasi untuk setiap elemen */}
+      {}
       <div id="home" className={`fade-slide-up ${isLoaded ? "show" : ""}`}>
         <Profile />
       </div>
