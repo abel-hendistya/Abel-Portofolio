@@ -6,12 +6,10 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Fungsi untuk toggle menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Fungsi untuk mendeteksi scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -27,7 +25,7 @@ function Header() {
 
   return (
     <>
-      {/* Header utama */}
+      {}
       <header className={`header ${isScrolled ? "header-small" : ""}`}>
         <h1 className="logo">My Portfolio</h1>
         <div className="menu-icon" onClick={toggleMenu}>
@@ -35,10 +33,10 @@ function Header() {
         </div>
       </header>
 
-      {/* Overlay untuk menu */}
+      {}
       {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
 
-      {/* Menu Sidebar */}
+      {}
       <div className={`menu ${isMenuOpen ? "menu-open" : ""}`}>
         <ul className="menu-list" onClick={toggleMenu}>
           <li>
