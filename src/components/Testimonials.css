@@ -1,134 +1,196 @@
-/* Testimonials.css */
-.testimonials-section {
-  padding: 2rem;
+/* Umum untuk tata letak container */
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px; /* Tambahkan ruang di dalam container */
   background-color: #1b1b1b;
 }
 
-.main-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: #ff6c33;
-}
-
-
-.testimonials-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.testimonial-form-container {
-  flex: 1;
-  background: #ff6c33;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-output-container {
-  flex: 2;
-  background: #ff6c33;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.testimonials-section {
+  background-color: #1b1b1b;
 }
 
 .testimonials-title {
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* Tambahkan jarak ke bawah */
+  color: #0A3981;
 }
 
-.testimonial-item {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
 
-.testimonial-quote {
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.testimonial-author {
+.row {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  gap: 20px;
+  justify-content: flex-start; /* Memastikan elemen berada dalam satu baris */
 }
 
-.testimonial-form .form-group {
-  margin-bottom: 1rem;
-}
-
-.testimonial-form label {
+/* Tombol Add */
+.add-btn {
   display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 20px; /* Memberikan jarak antara tombol Add dan form/output */
+  padding: 10px 20px; /* Padding nyaman */
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.testimonial-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #fff; /* Menjadikan teks label berwarna putih */
-  }
-  
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+.submit-btn {
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 10%; 
+  background-color: #28a745; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.submit-btn:hover {
+  background-color: #218838; 
+  transform: scale(1.05); 
+}
+
+.learn-more-btn {
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 10%; 
+  background-color: #17a2b8; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #138496; 
+  transform: scale(1.05); 
+}
+
+.edit-btn {
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 10%; 
+  background-color: #ffc107; 
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800; 
+  transform: scale(1.05); 
+}
+
+.delete-btn {
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 10%; 
+  background-color: #dc3545;  
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+
+.delete-btn:hover {
+  background-color: #c82333;  
+  transform: scale(1.05);   
+}
+
+
+/* Formulir */
+.testimonial-form-container {
+  background: #202020;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input dan Label */
+.testimonial-form .form-group {
+  margin-bottom: 15px; /* Tambahkan jarak antar form input */
+}
 
 .testimonial-form input,
 .testimonial-form textarea {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.testimonial-form .submit-btn {
-  background-color: #2b2b2b;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+.testimonial-form label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+/* Kartu Testimoni */
+.testimonial-card {
+  padding: 20px;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.testimonial-stars {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 20px;
+  color: #ccc; /* Warna default putih keabu-abuan */
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.testimonial-form .submit-btn:hover {
-  background-color: #0056b3;
+.star.filled {
+  color: #ffd700; /* Warna kuning/emas saat terisi */
 }
+
+
 
 .testimonial-actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Untuk bagian testimonial */
+.testimonial-output-container {
+  flex-grow: 1; /* Memberikan ruang lebih banyak untuk output testimonial */
+  margin-top: 20px; /* Memberikan jarak antara form dan output */
+}
+
+/* Mengatur responsivitas */
+@media screen and (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column; /* Menyusun elemen secara vertikal pada layar kecil */
   }
-  
-  .edit-btn,
-  .delete-btn {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+  .row {
+    flex-direction: column;
+    gap: 10px; /* Mengurangi jarak pada perangkat mobile */
   }
-  
-  .edit-btn {
-    background-color: #007bff;
-    color: white;
+
+  .testimonial-output-container {
+    margin-top: 20px;
   }
-  
-  .edit-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .delete-btn {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .delete-btn:hover {
-    background-color: #a71d2a;
-  }
-  
+}
